@@ -14,7 +14,7 @@ namespace gazebo
     public: virtual void Load(int _argc, char _argv)
             {
               // Get access to the world
-               // _world = gazebo::physics::get_world ("homework1" )
+               // _world = gazebo::physics::get_world ("homework1" ); // maybe i must use "default" here, since this is the name in RDF model
               // PhysicsEnginePtr physics_engine = gazebo::physics::World::GetPhysicsEngine ();
               // std::cout << "The physics engine type:";
               // std::cout << physics_engine->GetType() << std::endl;
