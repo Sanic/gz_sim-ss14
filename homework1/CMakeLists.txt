@@ -9,5 +9,5 @@ include_directories(include)
 include_directories(${GAZEBO_INCLUDE_DIRS} ${OGRE_INCLUDE_DIRS})
 link_directories(${GAZEBO_LIBRARY_DIRS} ${OGRE_LIBRARY_DIRS})
 
-add_library(system_gui SHARED src/move_objects.cpp)
-target_link_libraries(system_gui ${GAZEBO_libraries} ${OGRE_LIBRARIES})
+add_library(move_objects SHARED src/move_objects.cpp)
+target_link_libraries(move_objects ${GAZEBO_libraries} ${OGRE_LIBRARIES})
