@@ -10,7 +10,7 @@ This software has been tested with Gazebo 1.9.5, that has been shipped by ROS Hy
 
 Instructions Homework1
 ====
-- Go to that folder
+- Go to the homework1/ folder
 - mkdir build/
 - cd build
 - cmake ..
