@@ -6,20 +6,27 @@ Homework repository for the gazebo simulation seminar
 
 Notes
 =======
-Because i'am using gazebo that is shipped by ROS, i've tested everything using different commands:
+This software has been tested with Gazebo 1.9.5, that has been shipped by ROS Hydro (i've installed ros-hydro-desktop-full).
 
-Start Gazebo:
+Instructions Homework1
+====
+- Go to that folder
+- mkdir build/
+- cd build
+- cmake ..
+- make
+- cd ..
+
+This will build a server side plugin, that can control the world in the running simulation. You can load it by using:
+
 ```
-rosrun gazebo gazebo
+gzserver -s $ABSOLUTE_PATH_TO_REPO/homework1/build/libmove_objects.so worlds/homework1.sdf
 ```
 and 
 ```
-rosrun gazebo gui
+gzclient
 ```
 in another terminal
 
-Load a world: 
-```
-rosrun gazebo gazebo $absolute_path_to_repo/homework1/worlds/homework1.sdf
-```
+You should then see a sphere and a box, that are both moving at the same velocity.
 
