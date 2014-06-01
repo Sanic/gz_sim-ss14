@@ -42,3 +42,12 @@ Instructions Homework2
 ```
 export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:/FULL/PATH/TO/homework2/build
 ```
+
+The plugin in this exercise is a WorldPlugin. It must be findable by GAZEBO via the GAZEBO_PLUGIN_PATH variable. If you want to start the plugin for homework2, just start your gazebo with:
+```
+gazebo /PATH/TO/homework2/worlds/homework2.sdf
+```
+You should see how:
+1) Two objects fall on the ground
+2) The sphere begins to move and drags the Box with him via a Joint
+3) The Joint will be detached from both objects. The sphere will move alone then
