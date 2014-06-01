@@ -11,9 +11,10 @@ namespace gazebo
     // Attributes
     private: physics::WorldPtr _world;
     private: event::ConnectionPtr updateConnection;
+    private: bool _sleep_init_done;
 
     public: LinkObjects();
-    public: void Load(physics::WorldPtr _world, sdf::ElementPtr _sdf);
+    public: void Load(physics::WorldPtr _loaded_world, sdf::ElementPtr _sdf);
 
     /// \brief Callback method for every update in the current world
     public: void OnUpdate(const common::UpdateInfo & /*_info*/);
