@@ -1,5 +1,8 @@
 <sdf version="1.4">
   <world name="default">
+    <plugin name="link_objects" filename="liblink_objects.so"/>
+
+
     <light name="sun" type="directional">
       <cast_shadows>1</cast_shadows>
       <pose>0.000000 0.000000 10.000000 0.000000 0.000000 0.000000</pose>

@@ -4,15 +4,20 @@
 
 namespace gazebo
 {
+    LinkObjects::LinkObjects() : WorldPlugin()
+    {
+      std::cout << "Hello World!" << std::endl;
+    }
+
     //////////////////////////////////////////////////
-    void MoveObjects::Load(int _argc, char** _argv)
+    void LinkObjects::Load(physics::WorldPtr _world, sdf::ElementPtr _sdf)
     {
       // Don't do anything here, because the world will be loaded
       // in Init()!
     }
 
     //////////////////////////////////////////////////
-    void MoveObjects::OnUpdate(const common::UpdateInfo & /*_info*/)
+    void LinkObjects::OnUpdate(const common::UpdateInfo & /*_info*/)
     {
        // Get the box and sphere model
        physics::ModelPtr sphere_model = _world->GetModel("sphere1");
@@ -24,19 +29,19 @@ namespace gazebo
     }
 
     //////////////////////////////////////////////////
-    void MoveObjects::Init()
-    {
-      // Get the first world in the simulation
-      _world = physics::get_world (); 
-     std::cout << "The name of the current world: ";
-     std::cout << _world->GetName() << std::endl;
-     physics::PhysicsEnginePtr physics_engine = _world->GetPhysicsEngine ();
+    // void MoveObjects::Init()
+    // {
+    //   // Get the first world in the simulation
+    //   _world = physics::get_world (); 
+    //  std::cout << "The name of the current world: ";
+    //  std::cout << _world->GetName() << std::endl;
+    //  physics::PhysicsEnginePtr physics_engine = _world->GetPhysicsEngine ();
 
-     std::cout << "The physics engine type: ";
-     std::cout << physics_engine->GetType() << std::endl;
+    //  std::cout << "The physics engine type: ";
+    //  std::cout << physics_engine->GetType() << std::endl;
 
-     // Subscribe to the World Update event
-     this->updateConnection = event::Events::ConnectWorldUpdateBegin(
-         boost::bind(&MoveObjects::OnUpdate, this, _1));
-    }
+    //  // Subscribe to the World Update event
+    //  this->updateConnection = event::Events::ConnectWorldUpdateBegin(
+    //      boost::bind(&MoveObjects::OnUpdate, this, _1));
+    // }
 }

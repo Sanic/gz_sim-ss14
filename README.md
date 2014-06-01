@@ -30,3 +30,15 @@ in another terminal
 
 You should then see a sphere and a box, that are both moving at the same velocity.
 
+Instructions Homework2
+====
+- Go to the homework2/ folder
+- mkdir build/
+- cd build
+- cmake ..
+- make
+- cd ..
+- Register your build/ folder to your gazebo plugin path:
+```
+export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:/FULL/PATH/TO/homework2/build
+```
